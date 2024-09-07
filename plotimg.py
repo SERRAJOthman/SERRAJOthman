@@ -7,7 +7,7 @@ import matplotlib.image as mpimg
 
 def display_image(choice):
     if choice == "1":
-        img_path = 'path_to_image_1.png'  # Replace with the actual path to your first image
+        img_path = 'Screenshot_20240907-141421_ChatGPT.jpg'  # Replace with the actual path to your first image
     elif choice == "2":
         img_path = 'path_to_image_2.png'  # Replace with the actual path to your second image
     else:
