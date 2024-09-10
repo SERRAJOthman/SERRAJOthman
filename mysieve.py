@@ -11,8 +11,7 @@ for init in range(3):
 	for f in facteurs:
 		for r in restes:
 			H.append(P*f+r)
-	r1=H[0]
-	P*=r1
+	P*=H[0]
 	restes=[1]+H
 	sortie+=H
 	print("sortie:",sortie)
