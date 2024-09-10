@@ -16,5 +16,5 @@ for init in range(3):
 	r1=H[0]
 	P*=r1
 	restes=[1]+H
-	sortie+=restes[1:]
+	sortie+=H
 	print("sortie:",sortie)
