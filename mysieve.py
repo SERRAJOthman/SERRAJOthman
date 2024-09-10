@@ -3,9 +3,10 @@ sortie=premiers
 facteurs=[1,2]
 P=2
 restes=[1]
-for init in range(3):
+c=1
+for init in range(4):
 	F=sortie[init+1]
-	G=sortie[init+2]
+	c+=1
 	for o in range(facteurs[-1]+1,F):
 		facteurs.append(o)
 	H=[]
@@ -15,10 +16,14 @@ for init in range(3):
 	if init<1:P*=H[0]
 	else:P*=restes[2]
 	X=[]
+	u=0
 	for x in H[2:]:
-		if x%F==0 or x%G==0:
-			continue
-		X.append(x)
+		for ci in range(1,c):
+			if x%sortie[init+ci]==0:
+				u=0
+				break
+			else:u=1
+		if u==1:X.append(x)
 	restes=[1]+H[:2]+X
 	sortie+=X
 	print("sortie:",sortie)
