@@ -4,7 +4,8 @@ facteurs=[1,2]
 P=2
 restes=[1]
 for init in range(3):
-	F=premiers[init+1]
+	F=sortie[init+1]
+	G=sortie[init+2]
 	for o in range(facteurs[-1]+1,F):
 		facteurs.append(o)
 	H=[]
@@ -15,7 +16,7 @@ for init in range(3):
 	else:P*=restes[2]
 	X=[]
 	for x in H[2:]:
-		if x%F==0:
+		if x%F==0 or x%G==0:
 			continue
 		X.append(x)
 	restes=[1]+H[:2]+X
