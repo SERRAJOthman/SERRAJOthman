@@ -34,19 +34,26 @@ restes,P,facteures,PBIS,x=Liste_restes([1,5],2,[1,2],PBIS,x)
 #print(filtrage(restes,PBIS,x))
 #print([1,5],2,[1,2],PBIS,x)
 #print(restes,PBIS)
-number=2
+number=3
 for k in range(number):
 	restes=filtrage(restes,PBIS,x)
 	restes,P,facteures,PBIS,x=Liste_restes(restes,P,facteures,PBIS,x)
 	#print(restes,PBIS)
 divmax=int(sqrt(PBIS[-1]))+1
+print(divmax)
 Premiers=[]
-#print(divmax)
-for b in PBIS:
-	for a in PBIS:
-		if a>divmax:break
-	if b!=a and b%a==0:
-		print(b,a)
-		continue
-	Premiers.append(b)
-print("Premiers:", Premiers)
+xd=0
+for xc in range(len(PBIS)):
+	if PBIS[xc]>divmax:
+		break
+xd=xc-1
+DIV=[11]+PBIS[x:xd]
+for pbis in PBIS:
+	for div in DIV:
+		if pbis==div:
+			Premiers.append(pbis)
+			break
+		elif pbis%div!=0:
+			Premiers.append(pbis)
+			break
+print(Premiers,DIV)
