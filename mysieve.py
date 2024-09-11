@@ -31,12 +31,14 @@ def filtrage(restes,PBIS,x):
 PBIS=[2,3]
 x=1
 restes,P,facteures,PBIS,x=Liste_restes([1,5],2,[1,2],PBIS,x)
-number=3
+number=4
 for k in range(number):
 	restes=filtrage(restes,PBIS,x)
 	restes,P,facteures,PBIS,x=Liste_restes(restes,P,facteures,PBIS,x)
 Premiers=PBIS
+divmax=int(sqrt(PBIS[-1]))
 for xc in range(len(PBIS)):
 	Premiers=filtrage(Premiers,PBIS,xc)
+	if PBIS[xc]>divmax:break
 Premiers=[2]+Premiers[1:]
 print(Premiers)
