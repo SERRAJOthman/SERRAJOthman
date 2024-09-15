@@ -37,7 +37,7 @@ for k in range(number):
 	restes,P,facteures,PBIS,x=Liste_restes(restes,P,facteures,PBIS,x)
 Premiers=PBIS
 divmax=int(sqrt(PBIS[-1]))
-for xc in range(len(PBIS)):
+for xc in range(x,len(PBIS)):
 	Premiers=filtrage(Premiers,PBIS,xc)
 	if PBIS[xc]>divmax:break
 Premiers=[2]+Premiers[1:]
